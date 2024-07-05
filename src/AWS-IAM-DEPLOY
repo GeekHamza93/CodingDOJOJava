@@ -1,0 +1,91 @@
+To deploy Folder and IA Synchronization stacks on AWS using CloudFormation, you'll need to follow these steps:
+
+1. **Prepare the CloudFormation Templates**: Ensure you have the YAML or JSON templates for both the Folder and IA Synchronization stacks. These templates define the AWS resources required for each stack.
+
+2. **AWS CLI Installation**: Make sure you have the AWS CLI installed and configured on your local machine. If not, you can install it following the [AWS CLI installation guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+
+3. **IAM Permissions**: Ensure you have the necessary IAM permissions to create and manage CloudFormation stacks, as well as the resources defined within the templates.
+
+4. **Deploy the Folder Stack**: Use the AWS CLI or the AWS Management Console to deploy the Folder stack. Below are the CLI commands for deploying a stack:
+
+   ```sh
+   aws cloudformation create-stack --stack-name Folder-Stack --template-body file://path_to_Folder_template.yaml --capabilities CAPABILITY_NAMED_IAM
+   ```
+
+   Replace `path_to_Folder_template.yaml` with the actual path to your Folder CloudFormation template file. The `--capabilities CAPABILITY_NAMED_IAM` flag is required if your template creates or modifies IAM resources.
+
+5. **Deploy the IA Synchronization Stack**: Similarly, deploy the IA Synchronization stack using the following CLI command:
+
+   ```sh
+   aws cloudformation create-stack --stack-name IA-Sync-Stack --template-body file://path_to_ia_sync_template.yaml --capabilities CAPABILITY_NAMED_IAM
+   ```
+
+   Replace `path_to_ia_sync_template.yaml` with the actual path to your IA Synchronization CloudFormation template file.
+
+6. **Monitor Stack Creation**: You can monitor the creation of your stacks using the AWS Management Console or by running the following CLI command to describe the stack status:
+
+   ```sh
+   aws cloudformation describe-stacks --stack-name Folder-Stack
+   aws cloudformation describe-stacks --stack-name IA-Sync-Stack
+   ```
+
+7. **Update Stacks**: If you need to update the stacks, you can use the `update-stack` command with the updated template files:
+
+   ```sh
+   aws cloudformation update-stack --stack-name Folder-Stack --template-body file://path_to_updated_Folder_template.yaml --capabilities CAPABILITY_NAMED_IAM
+   aws cloudformation update-stack --stack-name IA-Sync-Stack --template-body file://path_to_updated_ia_sync_template.yaml --capabilities CAPABILITY_NAMED_IAM
+   ```
+
+8. **Delete Stacks**: To delete the stacks, you can use the following commands:
+
+   ```sh
+   aws cloudformation delete-stack --stack-name Folder-Stack
+   aws cloudformation delete-stack --stack-name IA-Sync-Stack
+   ```
+
+Make sure to replace placeholder file paths and stack names with the actual paths and names relevant to your environment. If you encounter any specific issues or errors during deployment, please provide the error messages for further assistance.To deploy Folder and IA Synchronization stacks on AWS using CloudFormation, you'll need to follow these steps:
+
+                                                                                                                                                                                                                                                     1. **Prepare the CloudFormation Templates**: Ensure you have the YAML or JSON templates for both the Folder and IA Synchronization stacks. These templates define the AWS resources required for each stack.
+
+                                                                                                                                                                                                                                                     2. **AWS CLI Installation**: Make sure you have the AWS CLI installed and configured on your local machine. If not, you can install it following the [AWS CLI installation guide](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html).
+
+                                                                                                                                                                                                                                                     3. **IAM Permissions**: Ensure you have the necessary IAM permissions to create and manage CloudFormation stacks, as well as the resources defined within the templates.
+
+                                                                                                                                                                                                                                                     4. **Deploy the Folder Stack**: Use the AWS CLI or the AWS Management Console to deploy the Folder stack. Below are the CLI commands for deploying a stack:
+
+                                                                                                                                                                                                                                                        ```sh
+                                                                                                                                                                                                                                                        aws cloudformation create-stack --stack-name Folder-Stack --template-body file://path_to_Folder_template.yaml --capabilities CAPABILITY_NAMED_IAM
+                                                                                                                                                                                                                                                        ```
+
+                                                                                                                                                                                                                                                        Replace `path_to_Folder_template.yaml` with the actual path to your Folder CloudFormation template file. The `--capabilities CAPABILITY_NAMED_IAM` flag is required if your template creates or modifies IAM resources.
+
+                                                                                                                                                                                                                                                     5. **Deploy the IA Synchronization Stack**: Similarly, deploy the IA Synchronization stack using the following CLI command:
+
+                                                                                                                                                                                                                                                        ```sh
+                                                                                                                                                                                                                                                        aws cloudformation create-stack --stack-name IA-Sync-Stack --template-body file://path_to_ia_sync_template.yaml --capabilities CAPABILITY_NAMED_IAM
+                                                                                                                                                                                                                                                        ```
+
+                                                                                                                                                                                                                                                        Replace `path_to_ia_sync_template.yaml` with the actual path to your IA Synchronization CloudFormation template file.
+
+                                                                                                                                                                                                                                                     6. **Monitor Stack Creation**: You can monitor the creation of your stacks using the AWS Management Console or by running the following CLI command to describe the stack status:
+
+                                                                                                                                                                                                                                                        ```sh
+                                                                                                                                                                                                                                                        aws cloudformation describe-stacks --stack-name Folder-Stack
+                                                                                                                                                                                                                                                        aws cloudformation describe-stacks --stack-name IA-Sync-Stack
+                                                                                                                                                                                                                                                        ```
+
+                                                                                                                                                                                                                                                     7. **Update Stacks**: If you need to update the stacks, you can use the `update-stack` command with the updated template files:
+
+                                                                                                                                                                                                                                                        ```sh
+                                                                                                                                                                                                                                                        aws cloudformation update-stack --stack-name Folder-Stack --template-body file://path_to_updated_Folder_template.yaml --capabilities CAPABILITY_NAMED_IAM
+                                                                                                                                                                                                                                                        aws cloudformation update-stack --stack-name IA-Sync-Stack --template-body file://path_to_updated_ia_sync_template.yaml --capabilities CAPABILITY_NAMED_IAM
+                                                                                                                                                                                                                                                        ```
+
+                                                                                                                                                                                                                                                     8. **Delete Stacks**: To delete the stacks, you can use the following commands:
+
+                                                                                                                                                                                                                                                        ```sh
+                                                                                                                                                                                                                                                        aws cloudformation delete-stack --stack-name Folder-Stack
+                                                                                                                                                                                                                                                        aws cloudformation delete-stack --stack-name IA-Sync-Stack
+                                                                                                                                                                                                                                                        ```
+
+                                                                                                                                                                                                                                                     Make sure to replace placeholder file paths and stack names with the actual paths and names relevant to your environment. If you encounter any specific issues or errors during deployment, please provide the error messages for further assistance.

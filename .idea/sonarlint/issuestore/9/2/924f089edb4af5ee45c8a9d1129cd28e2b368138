@@ -1,0 +1,6 @@
+
+L	java:S106%"+Replace this use of System.out by a logger.(è”Ëİøÿÿÿÿ8ø„Ÿ“ˆ2
+L	java:S106&"+Replace this use of System.out by a logger.(Ù·üúúÿÿÿÿ8ø„Ÿ“ˆ2
+G	java:S1065"+Replace this use of System.out by a logger.(èşÅï8ù„Ÿ“ˆ2
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ù„Ÿ“ˆ2
