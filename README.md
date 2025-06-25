@@ -35,6 +35,3 @@ The provided `main` method includes test cases to verify the correctness of the 
 
 If all tests pass successfully, you will see the message "All tests passed. Congratz !" indicating that the method works correctly for the provided test cases.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
